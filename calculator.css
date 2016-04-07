@@ -1,0 +1,64 @@
+.container {
+background-color:#B5BFF5;
+ border: 2px solid #000;
+ border-radius: .6em;
+ padding: 1px;
+ margin: 1px;
+display: inline-block;
+font-size: 16px;
+color: #000;
+font-family: helvetica;
+text-align: center;
+width:270px;
+}
+
+h1 {
+font-size: 22px;
+font-family: helvetica;
+}
+
+.red{
+color:#000;
+}
+
+.button {
+background-color:white;
+font-family: helvetica;
+border: 2px solid #000
+border-radius:0.5em;
+color:#000;
+}
+
+.input {
+font-size:20px;
+}
+
+.results {
+background-color:#B4EDFA;
+.font-size:16px;
+border:3px solid #fff;
+margin:10px;
+padding-top:5px;
+border-radius:0.6em;
+font-family: helvetica;
+}
+
+.da {
+background-color:#B5BFF5;
+margin-left:20px;
+margin-right:20px;
+border:2px solid #fff;	
+border-radius:0.4em;
+}
+
+#fork {
+display:block;
+width:100px;
+margin:auto;
+}
+
+.text{
+float:right;
+font-size:20px;
+}
+
