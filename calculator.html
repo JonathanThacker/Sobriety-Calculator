@@ -1,0 +1,178 @@
+<html>
+<head>
+<style>
+.container {
+background-color:#B5BFF5;
+ border: 2px solid #000;
+ border-radius: .6em;
+ padding: 1px;
+ margin: 1px;
+display: inline-block;
+font-size: 16px;
+color: #000;
+font-family: helvetica;
+text-align: center;
+width:270px;
+}
+
+h1 {
+font-size: 22px;
+font-family: helvetica;
+}
+
+.red{
+color:#000;
+}
+
+.button {
+background-color:white;
+font-family: helvetica;
+border: 2px solid #000
+border-radius:0.5em;
+color:#000;
+}
+
+.input {
+font-size:20px;
+}
+
+.results {
+background-color:#B4EDFA;
+font-size:16px;
+border:3px solid #fff;
+margin:10px;
+padding-top:5px;
+border-radius:0.6em;
+font-family: helvetica;
+}
+
+.da {
+background-color:#B5BFF5;
+margin-left:20px;
+margin-right:20px;
+border:2px solid #fff;	
+border-radius:0.4em;
+}
+
+#fork {
+display:block;
+width:100px;
+margin:auto;
+}
+
+.text{
+float:right;
+font-size:20px;
+}
+</style>
+
+<script language="JavaScript">
+
+var myDate;
+
+function setDate(datest){
+myDate = datest.value;
+myDate = new Date(myDate);
+}
+
+function FindTime(form){
+var diff;
+today = new Date();
+diff = today.getTime() - myDate.getTime();
+
+
+
+years = Math.floor(diff / 31536000000);
+
+days = Math.floor(diff / 86400000);
+
+H = Math.floor(days % 365);
+
+R = Math.floor(H % 30)
+
+dMy = Math.floor(days % 365);
+
+bM = Math.floor(dMy % 30);
+
+bm = Math.floor(dMy - bM);
+
+month = Math.floor(bm / 30);
+
+
+
+
+form.Fyears.value = years;
+
+form.Fmonth.value = month;
+
+form.FR.value = R;
+
+
+
+}
+
+</script>
+  
+  
+  
+</head> 
+<body>
+
+
+
+
+
+
+
+<div class="container">
+<form method="post"> 
+<div class="da">
+<h1>Sobriety Calculator</h1> 
+
+</div>
+
+Enter your sobriety date 
+<b>mm/dd/yyyy</b>
+<br />
+
+
+<input type="text" name="FmyDate" size="5" onchange="setDate(this)" />
+
+<p>
+<input type="button" onclick="FindTime(this.form)" value="Calculate" class="button" />
+
+<p>
+<div class="results">
+You have been sober for..
+<p>
+
+<div id="fork">
+
+<input type="text" name="Fyears" size="1" disabled="disabled" class="red" />
+<div class="text">
+year(s)
+</div></div>
+<p>
+
+<div id="fork">
+<input type="text" name="Fmonth" size="8" disabled="disabled" class="red" />
+<div class="text">
+month(s)
+</div></div>
+<p>
+
+
+<div id="fork">
+<input type="text" name="FR" size="1"  disabled="disabled" class="red" />
+<div class="text">
+day(s)
+</div></div>
+<p>
+</div>
+
+
+
+
+</form>
+</div>
+</body></html>
